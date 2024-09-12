@@ -47,6 +47,11 @@ a {
 
 }
 
+.nav-link.current {
+    color: var(--accent-color);
+    border-bottom: 2px solid black;
+}
+
 .nav-link:hover,
 .nav-link:focus {
     color: var(--accent-color);
