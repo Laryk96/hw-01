@@ -4,6 +4,7 @@
     --white-color-text: #ffffff;
     --accent-color: #2196f3;
     --bgd-accent-color: #2f303a;
+    --radio-btn-background: #f5F4fa;
 }
 
 body {
@@ -97,7 +98,8 @@ a {
     color: var(--white-color-text)
 }
 
-.section-title {
+.section-title,
+.cards-title {
     color: var(--title-color-text);
     font-weight: 700;
     font-size: 36px;
@@ -140,4 +142,22 @@ a {
 .address-text.accent {
     text-decoration: none;
     color: inherit;
+}
+
+/* Portfolio */
+
+.filter-btn {
+    background-color: var(--radio-btn-background);
+    border-color: transparent;
+    border-radius: 4px;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+    background-color: var(--accent-color);
+    color: var(--white-color-text)
+}
+
+.cards-description {
+    font-size: 16px;
 }
