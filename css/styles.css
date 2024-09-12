@@ -8,13 +8,30 @@
 }
 
 body {
-    font-family: "Roboto", system-ui;
-    font-weight: 400;
-    font-style: normal;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
+
     background-color: #ffffff;
     color: var(--primary-color-text);
 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -147,6 +164,7 @@ a {
 /* Portfolio */
 
 .filter-btn {
+    font-family: inherit;
     background-color: var(--radio-btn-background);
     border-color: transparent;
     border-radius: 4px;
@@ -160,4 +178,5 @@ a {
 
 .cards-description {
     font-size: 16px;
+
 }
