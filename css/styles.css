@@ -7,10 +7,10 @@
     --radio-btn-background: #f5F4fa;
 }
 
+
 body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
-
     background-color: #ffffff;
     color: var(--primary-color-text);
 
@@ -47,10 +47,8 @@ a {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
     font-size: 26px;
     line-height: 1.15;
-
     color: #000000
 }
 
@@ -90,9 +88,11 @@ a {
 
 .section-hero {
     display: block;
-    background-color: var(--bgd-accent-color);
     padding: 200px 0px;
+
+    background-color: var(--bgd-accent-color);
 }
+
 
 .hero-title {
     text-align: center;
@@ -130,7 +130,6 @@ a {
 }
 
 .peculiarity-text {
-
     line-height: 1.7;
 }
 
@@ -148,6 +147,7 @@ a {
 
 .footer {
     padding: 60px 215px;
+
     background-color: var(--bgd-accent-color);
 }
 
@@ -164,7 +164,6 @@ a {
 /* Portfolio */
 
 .filter-btn {
-    font-family: inherit;
     background-color: var(--radio-btn-background);
     border-color: transparent;
     border-radius: 4px;
