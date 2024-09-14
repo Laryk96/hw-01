@@ -5,6 +5,8 @@
     --accent-color: #2196f3;
     --bgd-accent-color: #2f303a;
     --accent-color-background: #f5F4fa;
+    --hero-color-bgd: #c4c4c4;
+    --hero-overlay: #2f303a40;
 }
 
 
@@ -39,6 +41,20 @@ a {
 }
 
 /* other */
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 .title {
     color: var(--title-color-text);
     font-weight: 700;
@@ -101,7 +117,6 @@ a {
 /* header */
 .nav {
     display: flex;
-    justify-content: space-between;
     height: 100%;
     align-items: center;
 
@@ -110,12 +125,14 @@ a {
 .site-nav {
     display: flex;
     gap: 50px;
+    margin-left: 93px;
 
 }
 
 .contact-list {
     display: flex;
-    gap: 50px
+    gap: 50px;
+    margin-left: auto;
 }
 
 .logo-accent {
@@ -141,6 +158,8 @@ a {
 
 
 .contact-link {
+    display: inline-flex;
+    align-items: center;
     font-weight: 500;
     color: var(--primary-color-text);
     line-height: 1.14;
@@ -152,14 +171,28 @@ a {
     color: var(--accent-color);
 }
 
+
+.icon-email {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
 /* HERO */
 
 .section-hero {
     display: block;
     padding: 200px 0px;
-    text-align: center;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
 
-    background-color: var(--bgd-accent-color);
+
+    text-align: center;
+    background-image: linear-gradient(to bottom, var(--hero-overlay), var(--hero-overlay)), url(../images/hero/hero-bgd.jpg);
+    background-color: var(--hero-color-bgd);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-title {
@@ -188,11 +221,42 @@ a {
 .features {
     display: flex;
     gap: 30px;
-
 }
 
-.features-item {
-    flex-basis: calc((100% - 30px)/ 4);
+.features-item::before {
+    content: '';
+    display: block;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+
+    border-radius: 4px;
+    background-color: var(--accent-color-background);
+}
+
+.antenna-icon::before {
+    background-image: url(../images/svg/antenna.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.astronaut-icon::before {
+    background-image: url(../images/svg/astronaut.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.clock-icon::before {
+    background-image: url(../images/svg/clock.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.diagram-icon::before {
+    background-image: url(../images/svg/diagram.svg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .features-title {
@@ -224,7 +288,7 @@ a {
 }
 
 .team-item {
-    flex-basis: calc((100% - 30px)/ 4);
+    flex-basis: calc((100% - 30px * 3)/ 4);
     padding-bottom: 30px;
     border-radius: 0 0 4px 4px;
 
@@ -237,6 +301,7 @@ a {
 
 .text-box {
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .team-name {
@@ -251,6 +316,44 @@ a {
 .team-description {
     font-size: 16px;
     line-height: 1.175;
+}
+
+/* social */
+
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-item {
+    width: 44px;
+    height: 44px;
+}
+
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    color: var(--primary-color-text)
+}
+
+.social-link:hover {
+    background-color: var(--accent-color);
+    color: var(--white-color-text)
+}
+
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+
+    fill: currentColor;
 }
 
 /* footer */
