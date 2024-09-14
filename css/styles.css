@@ -10,6 +10,7 @@
 }
 
 
+
 body {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
@@ -63,6 +64,18 @@ a {
     text-align: center;
 }
 
+.social-title {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    color: var(--white-color-text);
+
+}
+
 .list {
     list-style: none;
 }
@@ -90,10 +103,18 @@ a {
     width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+
 }
 
 .container.page-header {
     height: 80px;
+
+}
+
+.container-flex {
+    display: flex;
+    align-items: baseline;
+    gap: 80px;
 }
 
 
@@ -341,6 +362,12 @@ a {
     border-radius: 50%;
 
     color: var(--primary-color-text)
+}
+
+.social-link-second {
+    background-color: rgba(255, 255, 255, .1);
+
+    color: #afb1b8;
 }
 
 .social-link:hover {
