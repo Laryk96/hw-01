@@ -10,8 +10,6 @@
     --indent-top: 80px;
 }
 
-
-
 body {
     padding-top: var(--indent-top);
 
@@ -19,7 +17,6 @@ body {
     font-size: 14px;
     background-color: #ffffff;
     color: var(--primary-color-text);
-
 }
 
 h1,
@@ -175,6 +172,8 @@ a {
     font-weight: 500;
     color: var(--title-color-text);
     line-height: 1.14;
+
+    transition: color 250ms ease;
 }
 
 .nav-link.current {
@@ -189,7 +188,8 @@ a {
     bottom: -31px;
     left: 0;
     width: 100%;
-    border: 2px solid var(--accent-color);
+    height: 4px;
+    background-color: var(--accent-color);
 
     border-radius: 2px;
 
@@ -207,6 +207,8 @@ a {
     font-weight: 500;
     color: var(--primary-color-text);
     line-height: 1.14;
+
+    transition: color 250ms ease;
 
 }
 
@@ -256,7 +258,20 @@ a {
     line-height: 1.87;
     border-color: transparent;
     background-color: var(--accent-color);
-    color: var(--white-color-text)
+    color: var(--white-color-text);
+
+    transition: background-color 200ms ease;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    cursor: pointer;
+    background-color: #0089f9;
+
+}
+
+.hero-button:active {
+    background-color: var(--primary-color-text);
 }
 
 
@@ -405,16 +420,18 @@ a {
     height: 100%;
     border-radius: 50%;
 
-    color: var(--primary-color-text)
+    color: var(--primary-color-text);
+
+    transition: color 250ms ease, background-color 250ms ease;
 }
 
 .social-link-second {
     background-color: rgba(255, 255, 255, .1);
-
     color: #afb1b8;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
     background-color: var(--accent-color);
     color: var(--white-color-text)
 }
@@ -456,6 +473,8 @@ a {
 
     color: inherit;
 
+    transition: color 250ms ease, border-color 250ms ease;
+
 }
 
 .clients-link:hover,
@@ -485,14 +504,21 @@ a {
     gap: 9px;
 }
 
-.address-text {
+.address-link {
     color: var(--white-color-text);
 
+    transition: color 250ms ease;
 }
 
-.address-text.accent {
+.address-link.accent {
     text-decoration: none;
     color: inherit;
+}
+
+.address-link:hover,
+.address-link:focus {
+
+    color: var(--accent-color)
 }
 
 /* Portfolio */
@@ -510,6 +536,8 @@ a {
     text-align: center;
     background-color: var(--radio-btn-background);
     border-color: transparent;
+
+    transition: color 250ms ease, background-color 250ms ease;
 }
 
 .filter-btn:hover,
@@ -526,15 +554,15 @@ a {
 
 .card-item {
     flex-basis: calc((100% - 60px) / 3);
-    border: 1px solid #eeeeee
+    border: 1px solid #eeeeee;
+
+    transition: box-shadow 300ms ease;
 }
 
 
 .card-thumb {
     position: relative;
     overflow: hidden;
-
-
 }
 
 .card-overlay {
@@ -550,14 +578,23 @@ a {
     line-height: 1.555;
     color: var(--white-color-text);
 
+    opacity: 0;
     transform: translateY(100%);
-    transition: transform 300ms ease;
+    transition: transform 300ms ease, background-color 300ms ease, opacity 400ms ease;
 }
 
-
-.card-item:hover .card-overlay {
+.card-item:hover .card-overlay,
+.card-item:focus .card-overlay {
     background-color: rgba(33, 150, 243, .9);
     transform: translateY(0);
+
+    opacity: 1;
+}
+
+.card-item:hover,
+.card-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, .12), 0px 4px 4px rgba(0, 0, 0, .06), 1px 4px 6px rgba(0, 0, 0, .16);
+
 }
 
 .card-img {
@@ -577,4 +614,80 @@ a {
 .card-description {
     font-size: 16px;
 
+}
+
+
+/* modal-window */
+
+.modal-open {
+    overflow-y: hidden;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #75757560;
+    backdrop-filter: blur(2px);
+
+
+    transition: opacity 500ms ease, visibility 500ms ease;
+    opacity: 1;
+    visibility: visible;
+
+    z-index: 10;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+
+    background-color: var(--white-color-text);
+
+    transform: translate(-50%, -50%) scale(1);
+
+    transition: transform 500ms ease;
+}
+
+.backdrop.is-hidden .modal-window {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.button-close {
+    position: absolute;
+    top: 8px;
+
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #00000010;
+
+
+    background-color: transparent;
+}
+
+
+.button-close:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color)
+}
+
+
+.icon-close {
+    fill: currentColor;
 }

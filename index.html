@@ -44,7 +44,7 @@
         <!-- HERO -->
         <section class='section-hero'>
             <h1 class='hero-title'>Ефективні рішення для<br /> вашого бізнесу</h1>
-            <button type="button" class='hero-button'>Замовити послугу</button>
+            <button type="button" class='hero-button' data-open-modal=''>Замовити послугу</button>
         </section>
         <!-- features -->
         <section class='section '>
@@ -320,9 +320,9 @@
             <div>
                 <a href="/" class='logo footer-logo'><span class='logo-accent'>Web</span>Studio</a>
                 <address class='address'>
-                    <a href="" class='address-text'>м. Київ, пр-т Лесі Українки, 26</a>
-                    <a href="mailto:info@devstudio.com" class='address-text accent'>info@devstudio.com</a>
-                    <a href="tel:+380961111111" class='address-text accent'>+38 096 111 11 11</a>
+                    <a href="" class='address-link'>м. Київ, пр-т Лесі Українки, 26</a>
+                    <a href="mailto:info@devstudio.com" class='address-link accent'>info@devstudio.com</a>
+                    <a href="tel:+380961111111" class='address-link accent'>+38 096 111 11 11</a>
                 </address>
             </div>
             <div>
@@ -363,7 +363,16 @@
         </div>
     </footer>
 
-
+    <!-- modal -->
+    <div class="backdrop is-hidden" data-backdrop>
+        <div class="modal-window">
+            <button type='button' class='button-close' data-close-modal=''>
+                <svg width='11' height='11' class='icon-close'>
+                    <use href="./images/svg/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
 </body>
 <script src='./js/modal-menu.js'></script>
 <script src='./js/modal-window.js'></script>
