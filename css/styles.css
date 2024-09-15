@@ -7,11 +7,14 @@
     --accent-color-background: #f5F4fa;
     --hero-color-bgd: #c4c4c4;
     --hero-overlay: #2f303a40;
+    --indent-top: 80px;
 }
 
 
 
 body {
+    padding-top: var(--indent-top);
+
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     background-color: #ffffff;
@@ -107,8 +110,7 @@ a {
 }
 
 .container.page-header {
-    height: 80px;
-
+    height: var(--indent-top);
 }
 
 .container-flex {
@@ -136,6 +138,15 @@ a {
 }
 
 /* header */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+
+    background-color: var(--white-color-text);
+}
+
 .nav {
     display: flex;
     height: 100%;
@@ -164,12 +175,24 @@ a {
     font-weight: 500;
     color: var(--title-color-text);
     line-height: 1.14;
-
 }
 
 .nav-link.current {
+    position: relative;
     color: var(--accent-color);
-    border-bottom: 2px solid black;
+
+}
+
+.nav-link.current::after {
+    content: '';
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    width: 100%;
+    border: 2px solid var(--accent-color);
+
+    border-radius: 2px;
+
 }
 
 .nav-link:hover,
@@ -301,6 +324,27 @@ a {
     gap: 30px;
 }
 
+.work-thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.work-image {}
+
+.work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 27px 15px;
+
+    text-align: center;
+    color: var(--white-color-text);
+    background-color: #2f303a80;
+}
+
 /* team */
 
 .team {
@@ -383,6 +427,50 @@ a {
     fill: currentColor;
 }
 
+
+/* clients */
+
+
+.clients {
+    display: flex;
+    gap: 30px;
+
+}
+
+.clients-item {
+    width: 170px;
+    height: 92px;
+    flex-basis: calc((100% - 150px)/6);
+
+}
+
+.clients-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    color: inherit;
+
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.clients-icon {
+    width: 106px;
+    height: 60px;
+
+    fill: currentColor
+}
+
 /* footer */
 
 .footer {
@@ -439,6 +527,37 @@ a {
 .card-item {
     flex-basis: calc((100% - 60px) / 3);
     border: 1px solid #eeeeee
+}
+
+
+.card-thumb {
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.555;
+    color: var(--white-color-text);
+
+    transform: translateY(100%);
+    transition: transform 300ms ease;
+}
+
+
+.card-item:hover .card-overlay {
+    background-color: rgba(33, 150, 243, .9);
+    transform: translateY(0);
 }
 
 .card-img {
