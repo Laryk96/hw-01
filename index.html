@@ -317,7 +317,7 @@
     </main>
     <footer class='footer'>
         <div class='container container-flex'>
-            <div>
+            <div class='address-box'>
                 <a href="/" class='logo footer-logo'><span class='logo-accent'>Web</span>Studio</a>
                 <address class='address'>
                     <a href="" class='address-link'>м. Київ, пр-т Лесі Українки, 26</a>
@@ -325,7 +325,7 @@
                     <a href="tel:+380961111111" class='address-link accent'>+38 096 111 11 11</a>
                 </address>
             </div>
-            <div>
+            <div class='social-box'>
                 <h2 class='social-title'>приєднуйтесь</h2>
                 <div>
                     <ul class='social-links list'>
@@ -360,9 +360,21 @@
                     </ul>
                 </div>
             </div>
+            <div class="form-box">
+                <b class='social-title'>Підпишіться на розсилку</b>
+                <form class='form-footer' autocomplete='off'>
+                    <div class='form-field'>
+                        <input type="email" name='email' placeholder='E-mail' class='form-input'>
+                        <button type="submit" class='form-btn'>Підписатися
+                            <svg width='24' height='24' class='icon-send'>
+                                <use href="./images/svg/sprite.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
-
     <!-- modal -->
     <div class="backdrop is-hidden" data-backdrop>
         <div class="modal-window">
@@ -371,10 +383,55 @@
                     <use href="./images/svg/sprite.svg#icon-close"></use>
                 </svg>
             </button>
+            <b class='form-title'>Залиште свої дані, ми вам передзвонимо</b>
+            <form class='main-form form js-speaker-form' autocomplete='off'>
+                <div role='group' class='fieldset'>
+                    <div class='form-field'>
+                        <label class='form-label'>
+                            Ім'я
+                            <input type="text" name='name' class='form-input input' required>
+                            <svg class='form-icon' width='18' height='18'>
+                                <use href="./images/svg/sprite.svg#icon-person"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class='form-field'>
+                        <label class='form-label'>
+                            Телефон
+                            <input type="tell" name='tell' class='form-input input' required>
+                            <svg class='form-icon' width='14' height='18'>
+                                <use href="./images/svg/sprite.svg#icon-tell"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class='form-field'>
+                        <label class='form-label'>
+                            Пошта
+                            <input type="email" name='email' class='form-input input' required>
+                            <svg class='form-icon' width='18' height='18'>
+                                <use href="./images/svg/sprite.svg#icon-email"></use>
+                            </svg>
+                        </label>
+                    </div>
+                    <div class='form-field'>
+                        <textarea name="comment" placeholder='Введіть текст' class='form-textarea input'></textarea>
+                    </div>
+                    <div class='form-field form-field--checkbox'>
+                        <label class='form-label form-label--checkbox'> <input type='checkbox' name="user-agree"
+                                value='true' class='form-checkbox input' required />
+                            <svg width='16' height='15' class='icon-checkbox'>
+                                <use href="./images/svg/sprite.svg#icon-check"></use>
+                            </svg>
+                            Погоджуюся
+                            з розсилкою та приймаю <a href="/">Умови договору</a></label>
+                    </div>
+                    <button type='submit' class='form-btn '>Відправити</button>
+                </div>
+            </form>
         </div>
     </div>
 </body>
-<script src='./js/modal-menu.js'></script>
+<!-- <script src='./js/modal-menu.js'></script> -->
 <script src='./js/modal-window.js'></script>
 <script src='./js/test-form.js'></script>
 
