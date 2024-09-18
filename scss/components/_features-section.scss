@@ -1,0 +1,23 @@
+$icons: 'antenna', 'astronaut', 'clock', 'diagram';
+
+.features {
+	display: flex;
+	gap: 30px;
+}
+
+.features__text {
+	line-height: 1.7;
+}
+
+.features__item::before {
+	content: '';
+	display: block;
+	width: 270px;
+	height: 120px;
+	margin-bottom: 30px;
+
+	border-radius: 4px;
+	background-color: $accent-color-background;
+}
+
+@include generateIcons($icons);

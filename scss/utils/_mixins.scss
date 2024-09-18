@@ -1,0 +1,9 @@
+@mixin generateIcons($iconList) {
+	@each $iconName in $iconList {
+		.features__item--#{$iconName}-icon::before {
+			background-image: url(../images/svg/#{$iconName}.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+}

@@ -1,0 +1,76 @@
+.page-header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+
+	background-color: $white-color-text;
+}
+
+.nav {
+	display: flex;
+	height: 100%;
+	align-items: center;
+}
+
+.nav__list {
+	display: flex;
+	gap: 50px;
+	margin-left: 93px;
+}
+
+.contact {
+	display: flex;
+	gap: 50px;
+	margin-left: auto;
+}
+
+.nav__link {
+	font-weight: 500;
+	color: $title-color-text;
+	line-height: 1.14;
+
+	transition: color 250ms ease;
+
+	&.current {
+		position: relative;
+		color: $accent-color;
+	}
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+
+	&.current::after {
+		content: '';
+		position: absolute;
+		bottom: -31px;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background-color: $accent-color;
+
+		border-radius: 2px;
+	}
+}
+
+.contact__link {
+	display: inline-flex;
+	align-items: center;
+	font-weight: 500;
+	color: $primary-color-text;
+	line-height: 1.14;
+
+	transition: color 250ms ease;
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+
+.contact__icon {
+	margin-right: 10px;
+	fill: currentColor;
+}

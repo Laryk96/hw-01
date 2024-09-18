@@ -1,0 +1,56 @@
+.main-section__title {
+	margin-bottom: 30px;
+
+	color: $white-color-text;
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+}
+
+.section__title {
+	margin-bottom: 50px;
+
+	color: $title-color-text;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+}
+
+.features__title {
+	margin-bottom: 10px;
+
+	font-size: 14px;
+	color: $title-color-text;
+	font-weight: 700;
+	line-height: 1.14;
+}
+
+.page-footer__title {
+	display: block;
+	margin-bottom: 20px;
+
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: $white-color-text;
+}
+
+.modal__title {
+	display: block;
+	text-align: center;
+	margin-bottom: 12px;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.17;
+	color: $title-color-text;
+}
+
+.card__title {
+	font-size: 18px;
+	text-align: start;
+	margin-bottom: 10px;
+}

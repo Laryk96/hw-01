@@ -1,0 +1,27 @@
+.page-footer {
+	padding: 60px 0;
+
+	background-color: $bgd-accent-color;
+}
+
+.address {
+	display: flex;
+	flex-direction: column;
+	gap: 9px;
+}
+
+.address__link {
+	color: $white-color-text;
+
+	transition: color 250ms ease;
+
+	&.accent {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}

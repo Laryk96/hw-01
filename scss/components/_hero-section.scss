@@ -1,0 +1,15 @@
+.main-section {
+	display: block;
+	padding: 200px 0px;
+	max-width: 1600px;
+	height: 600px;
+	margin: 0 auto;
+
+	text-align: center;
+	background-image: linear-gradient(to bottom, $hero-overlay, $hero-overlay),
+		url(../images/hero/hero-bgd.jpg);
+	background-color: $hero-color-bgd;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
