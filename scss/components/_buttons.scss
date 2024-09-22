@@ -1,3 +1,49 @@
+.menu-button {
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+
+	border: transparent;
+	background-color: transparent;
+
+	z-index: 2;
+	perspective: 600px;
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+
+	&.is-open {
+		position: fixed;
+		top: 10px;
+		right: 15px;
+	}
+}
+
+.menu-button__icon-set {
+	transform-style: preserve-3d;
+
+	transition: transform 300ms ease;
+
+	.menu-button.is-open & {
+		transform: rotateY(180deg);
+	}
+}
+
+.menu-button__icon-cross {
+	opacity: 0;
+
+	.menu-button.is-open & {
+		opacity: 1;
+	}
+}
+
+.menu-button__icon-menu {
+	.menu-button.is-open & {
+		opacity: 0;
+	}
+}
+
 .main-section__button {
 	padding: 10px 32px;
 	border-radius: 4px;
