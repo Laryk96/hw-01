@@ -4,10 +4,20 @@
 	background-color: $bgd-accent-color;
 }
 
+.page-footer__box {
+	@media screen and (max-width: 1199px) {
+		text-align: center;
+	}
+}
+
 .address {
 	display: flex;
 	flex-direction: column;
 	gap: 9px;
+
+	@media screen and (max-width: 1199px) {
+		gap: 8px;
+	}
 }
 
 .address__link {

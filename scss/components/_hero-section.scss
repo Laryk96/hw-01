@@ -1,15 +1,39 @@
 .main-section {
-	display: block;
-	padding: 200px 0px;
 	max-width: 1600px;
-	height: 600px;
 	margin: 0 auto;
+	height: 400px;
+	padding: 118px 0px;
 
-	text-align: center;
-	background-image: linear-gradient(to bottom, $hero-overlay, $hero-overlay),
-		url(../images/hero/hero-bgd.jpg);
 	background-color: $hero-color-bgd;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	text-align: center;
+
+	@media screen and (max-width: 767px) {
+		background-image: linear-gradient(to bottom, $hero-overlay, $hero-overlay),
+			image-set(
+				url(../images/main/mobail-bgd@2x.jpg) 2x,
+				url(../images/main/mobail-bgd.jpg) 1x
+			);
+	}
+
+	@media screen and (min-width: 767px) {
+		background-image: linear-gradient(to bottom, $hero-overlay, $hero-overlay),
+			image-set(
+				url(../images/main/tablet-bgd@2x.jpg) 2x,
+				url(../images/main/tablet-bgd.jpg) 1x
+			);
+
+		@media screen and (min-width: 1200px) {
+			height: 600px;
+			padding: 200px 0px;
+
+			background-image: linear-gradient(to bottom, $hero-overlay, $hero-overlay),
+				image-set(
+					url(../images/main/desktop-bgd@2x.jpg) 2x,
+					url(../images/main/desktop-bgd.jpg) 1x
+				);
+		}
+	}
 }

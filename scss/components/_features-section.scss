@@ -1,23 +1,51 @@
 $icons: 'antenna', 'astronaut', 'clock', 'diagram';
 
 .features {
-	display: flex;
-	gap: 30px;
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
 }
 
-.features__text {
-	line-height: 1.7;
-}
-
-.features__item::before {
-	content: '';
-	display: block;
-	width: 270px;
-	height: 120px;
+.features__item {
 	margin-bottom: 30px;
 
-	border-radius: 4px;
-	background-color: $accent-color-background;
+	@media screen and (max-width: 767px) {
+		max-width: 450px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		flex-basis: calc((100% - 30px) / 2);
+		&:nth-child(-n + 2) {
+			margin-bottom: 0;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 0;
+		flex-basis: calc((100% - 90px) / 4);
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		height: 120px;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+
+		border-radius: 4px;
+		background-color: $accent-color-background;
+	}
+}
+.features__text {
+	line-height: 1.7;
+	font-size: 14px;
 }
 
 @include generateIcons($icons);

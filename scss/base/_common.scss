@@ -7,14 +7,17 @@ $accent-color-background: #f5f4fa;
 $hero-color-bgd: #c4c4c4;
 $hero-overlay: #2f303a40;
 $indent-top: 80px;
+$indent-top-mobil: 60px;
 
 body {
-	padding-top: $indent-top;
-
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	background-color: #ffffff;
 	color: $primary-color-text;
+
+	@media screen and (min-width: 768px) {
+		padding-top: $indent-top;
+	}
 }
 
 h1,
@@ -49,7 +52,13 @@ ul {
 }
 
 .section {
-	padding: 94px 0;
+	@media screen and (max-width: 1199px) {
+		padding: 60px 0;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding: 94px 0;
+	}
 
 	&--no-padding-top {
 		padding-top: 0;
@@ -58,22 +67,55 @@ ul {
 	&--alternative-color {
 		background-color: $accent-color-background;
 	}
+
+	&--only-desktop {
+		display: none;
+		@media screen and (min-width: 1200px) {
+			display: block;
+		}
+	}
 }
 
 .container {
-	width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
+
+	@media screen and (max-width: 767px) {
+		max-width: 480px;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		width: 738px;
+	}
+	@media screen and (min-width: 1200px) {
+		width: 1200px;
+	}
 }
 
 .page-header__container {
 	@extend .container;
-	height: $indent-top;
+
+	@media screen and (max-width: 767px) {
+		height: $indent-top-mobil;
+	}
+
+	@media screen and (min-width: 768px) {
+		height: $indent-top;
+	}
 }
 
 .container__flex {
 	@extend .container;
 	display: flex;
 	align-items: baseline;
-	gap: 93px;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: 60px;
+
+	@media screen and (max-width: 767px) {
+		position: relative;
+	}
+	@media screen and (min-width: 1200px) {
+		gap: 93px;
+	}
 }

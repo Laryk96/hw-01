@@ -1,10 +1,18 @@
 .main-section__title {
 	margin-bottom: 30px;
 
-	color: $white-color-text;
 	font-weight: 900;
-	font-size: 44px;
-	line-height: 1.36;
+	color: $white-color-text;
+
+	@media screen and (max-width: 1199px) {
+		font-size: 26px;
+		line-height: 1.615;
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 44px;
+		line-height: 1.36;
+	}
 }
 
 .section__title {
@@ -24,6 +32,10 @@
 	color: $title-color-text;
 	font-weight: 700;
 	line-height: 1.14;
+
+	@media screen and (max-width: 767px) {
+		text-align: center;
+	}
 }
 
 .page-footer__title {
@@ -47,6 +59,11 @@
 	font-size: 20px;
 	line-height: 1.17;
 	color: $title-color-text;
+
+	@media screen and (max-width: 1199px) {
+		font-size: 20px;
+		line-height: 1.5;
+	}
 }
 
 .card__title {

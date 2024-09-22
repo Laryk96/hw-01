@@ -4,7 +4,9 @@
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.15;
-	color: #000000 &__accent {
+	color: #000000;
+
+	&--accent {
 		color: $accent-color;
 	}
 }
@@ -14,4 +16,6 @@
 	display: inline-block;
 	color: $white-color-text;
 	margin-bottom: 20px;
+	margin-left: auto;
+	// text-align: center;
 }
